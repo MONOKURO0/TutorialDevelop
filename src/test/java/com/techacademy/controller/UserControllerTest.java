@@ -84,23 +84,17 @@ class UserControllerTest {
         List<String> list = new ArrayList<String>(
                     Arrays.asList("キラメキ太郎", "キラメキ次郎", "キラメキ花子"));
 
+        // テストする件数（今回は3で固定）
         int countnum = 3;
 
+        // 件数が3件であっているか確認する
         assertEquals(userlist.size(), countnum);
 
+        // userlistにあるデータに対し、1件ずつidとnameが正しいか検証する
         for(int i=0; i<countnum; i++) {
             assertEquals(userlist.get(i).getId(), i+1);
             assertEquals(userlist.get(i).getName(), list.get(i));
         }
-        /*
-        assertEquals(userlist.size(), 3);
-        assertEquals(userlist.get(0).getId(), 1);
-        assertEquals(userlist.get(0).getName(), list.get(0));
-        assertEquals(userlist.get(1).getId(), 2);
-        assertEquals(userlist.get(1).getName(), list.get(1));
-        assertEquals(userlist.get(2).getId(), 3);
-        assertEquals(userlist.get(2).getName(), list.get(2));
-        */
     }
 
 }
